@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Texte décrivant le restaurant" />
+    <title>Mon restaurant, nous contacter</title>
+  </head>
+  <body>
+    <header>
+      <h1>Nous contacter</h1>
+      <nav>
+        <a href="index.html" title="Accueil">Accueil</a>
+        <a href="menu.html" title="Voir le menu">Menu</a>
+        <a href="contact.html" title="Nous contacter">Contact</a>
+      </nav>
+      <img
+        src="img/banniere-restautant.jpg"
+        alt="photo du restaurant"
+        width="1260"
+        height="366"
+      />
+    </header>
+    <section>
+        <h2>Où nous trouver</h2>
+        <p>123 rue de la Démonstration <br>
+        34000 Montpellier <br>
+        France</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11555.341887928531!2d3.8638683713728845!3d43.609967189136476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1714316629742!5m2!1sfr!2sfr" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Nous envoyer un mail</h2>
+        <form action="contact.html">
+            <div>
+                <label for="email">Votre e-mail <sup>*</sup></label>
+                <input type="email" required id="email" name="email">
+            </div>
+            <div>
+                <label for="firstname">Votre prénom <sup>*</sup></label>
+                <input type="text" required name="firstname" id="firstname">
+            </div>
+            <div>
+                <label for="message">Votre message <sup>*</sup></label>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <button type="submit">Envoyer votre email</button>
+        </form>
+    </section>
+    <footer>
+        <address>123 rue de la Démonstration</address>
+    </footer>
+  </body>
+</html>
