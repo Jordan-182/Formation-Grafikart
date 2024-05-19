@@ -29,6 +29,7 @@ img{
         linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4) 100%),
         url(img/eggs.jpg) center center / cover no-repeat;
     color: #fff;
+    background-attachment: fixed;
 }
 
 .topbar{
@@ -397,6 +398,113 @@ select option{
     margin-bottom: 2rem;
 }
 
+.block-ingredients{
+    border: solid 1px #c89446;
+    padding: 35px 20px;
+    font-weight: 600;
+    color: #383838;
+}
+
+.block-ingredients ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block-ingredients li{
+    padding: 5px 0;
+}
+
+.block-ingredients span{
+    width: 35px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 300;
+}
+
+.section-overflow{
+    padding: 20px 0;
+}
+
+.block-video{
+    text-align: center;
+    flex: none;
+    position: relative;
+    background: #383838;
+    display: block;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.block-video img{
+    width: 540px;
+    height: auto;
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
+    opacity: 0.6;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.block-video::after{
+    content: '';
+    background: url(img/play.png) center center no-repeat;
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: calc(50% - 31px);
+    bottom: calc(50% - 31px);
+    left: calc(50% - 31px);
+    right: calc(50% - 31px);
+    transition: transformation 0.3s;
+    cursor: pointer;
+}
+
+.block-video:hover::after{
+    transform: scale(1.1);
+}
+
+.block-video:hover img{
+    opacity: 0.9;
+}
+
+.recipes-mosaic p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.recipes-mosaic .more{
+    margin-top: 0.5rem;
+}
+
+.pagination{
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.pagination li{
+    display: inline-block;
+}
+
+.pagination a{
+    border: 1px solid #c89446;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -3000px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+.pagination a.active,
+.pagination a:hover{
+    background: #c89446;
+}
+
 @media only screen and (min-width: 600px){
     html{
         font-size: 16px;
@@ -521,9 +629,10 @@ select option{
 
      .home-section{
         background: 
-            top 75px right 0px url(img/oranges.jpg) no-repeat,
-            top 440px left 0px url(img/spices.jpg) no-repeat;
-        background-attachment: fixed;
+            top 255px right 0px url(img/oranges.jpg) no-repeat,
+            top 640px left 0px url(img/spices.jpg) no-repeat;
+        /* background-attachment: fixed; */
+        margin-top: -40px;
      }
 
      .home-section .container{
@@ -547,13 +656,13 @@ select option{
         margin-bottom: 110px;
      }
 
-     .menu-summary-item:nth-child(even){
+     .menu-summary .menu-summary-item:nth-child(even){
         padding-left: 0;
         padding-right: 192px;
         text-align: right;
      }
 
-     .menu-summary-item:nth-child(even) .menu-summary-img{
+     .menu-summary .menu-summary-item:nth-child(even) .menu-summary-img{
         right: 0;
         left: auto;
      }
@@ -627,6 +736,10 @@ select option{
         padding: 60px 0;
         background-size: 589px auto;
         background-attachment: fixed;
+     }
+
+     .recipes a:hover{
+        text-decoration: underline;
      }
 
      .recipes .title{
@@ -705,5 +818,51 @@ select option{
 
     .footer-credits span{
         font-weight: bold;
+    }
+
+    .block-ingredients{
+        padding: 35px 40px;
+        width: 350px;
+        flex: none;
+    }
+    
+    .block-ingredients span{
+        width: 35px;
+        margin-right: 50px;
+    }
+
+    .block-ingredients li{
+        padding: 10px 0;
+    }
+
+    .section-overflow{
+        padding: 0;
+        margin-top: -40px;
+    }
+
+    .block-right .block-video{
+        margin-left: 28px;
+    }
+
+    .recipes-mosaic{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: -60px;
+    }
+
+    .recipes-mosaic .menu-summary-item{
+        width: calc(50% - 25px);
+        margin-bottom: 60px;
+        font-size: 0.875rem;
+        padding-left: 150px;
+    }
+
+    .recipes-mosaic .menu-summary-img{
+        width: 125px;
+    }
+
+    .pagination{
+        margin: 60px 0;
     }
 }
